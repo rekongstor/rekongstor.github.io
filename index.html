@@ -143,7 +143,7 @@
                 <input style="width: 100%" id="email" type="email" placeholder="E-mail" />
             </div>
             <div>
-                <textarea></textarea> style="width: 100%" id="feedback" placeholder="Enter your message here"></textarea>
+                <textarea style="width: 100%" id="feedback" placeholder="Enter your message here"></textarea>
             </div>
             <button>Send</button>
         </div>
