@@ -18,6 +18,19 @@
             display: block;
         }
 
+        @media only screen and (max-device-width: 480px) {
+        .flex-cont3 {
+            padding-left: 10%;
+        }
+        }
+        @media only screen and (min-device-width: 481px) {
+        .flex-cont3 {
+            padding-left: 10%;
+            display: -webkit-flex;
+            display: flex;
+        }
+        }
+
         .flex-cont {
             padding-left: 10%;
             display: -webkit-flex;
@@ -49,7 +62,7 @@
         .div-desc {
             width: 33%;
             text-align: center;
-            font-size: large;
+            font-size:18px;
             font-family: Bahnschrift;
         }
 
@@ -80,43 +93,62 @@
         .list-item {
             display: inline;
         }
+        .nav-items{
+            width: auto;
+            display: inline;
+            padding-left:3em;
+            padding-right: 3em;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
     </style>
 </head>
 <body>
-    <!--CTA-->
-    <div class="cta, flex-cont">
-        <img alt="buy skyrim" src="cta.png" />
-        <div class="cta">
-            <a target="_blank" href="https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition"><button style="background-color: transparent"><img alt="buy on steam" src="steam.png" class="store-links" /></button></a>
-            <br>
-            <a target="_blank" href="https://elderscrolls.bethesda.net/ru/skyrim"><button style="background-color: transparent"><img alt="official bethesda page" src="bethesda.png" class="store-links" /></button></a>
+    <header>
+        <!--CTA-->
+        <div class="flex-cont">
+            <img style="width:60%; height:60%;" alt="buy skyrim" src="cta.png" />
+            <div class="cta">
+                <a target="_blank" href="https://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition"><button style="background-color: transparent"><img alt="buy on steam" src="steam.png" class="store-links" /></button></a>
+                <br>
+                <a target="_blank" href="https://elderscrolls.bethesda.net/ru/skyrim"><button style="background-color: transparent"><img alt="official bethesda page" src="bethesda.png" class="store-links" /></button></a>
+            </div>
         </div>
-    </div>
+        <hr />
+        <nav>
+            <ul class="flex-cont">
+                <li class="nav-items"><a href="#description-block">Description</a></li>
+                <li class="nav-items"><a href="#features-block">Features</a></li>
+                <li class="nav-items"><a href="#full-description-block">Full description</a></li>
+                <li class="nav-items"><a href="#feedback-block">Leave feedback</a></li>
+            </ul>
+        </nav>
+    </header>
     <hr />
     <!--Short description-->
-    <article class="article">
+    <article class="article" id="description-block">
         <h1>THE ELDER SCROLLS V: SKYRIM</h1>
         <p>Winner of more than 200 Game of the Year Awards, Skyrim Special Edition brings the epic fantasy to life in stunning detail. The Special Edition includes the critically acclaimed game and add-ons with all-new features like remastered art and effects, volumetric god rays, dynamic depth of field, screen-space reflections, and more. Skyrim Special Edition also brings the full power of mods to the PC and consoles. New quests, environments, characters, dialogue, armor, weapons and more – with Mods, there are no limits to what you can experience.</p>
     </article>
     <hr />
     <!--3 block-->
-    <ul class="flex-cont">
+    <ul class="flex-cont3" id="features-block">
         <li class="list-item, div-desc">
             <img class="cont-img" alt="map" src="map.png" />
             <p>Huge and living map with a lot of hidden places!</p>
         </li>
-        <li class="list-item, div-desc" ">
+        <li class="list-item, div-desc">
             <img class="cont-img" alt="dragon" src="dragon.png" />
             <p>Living dragon legends! Fight 'em all!</p>
         </li>
-        <li class="list-item, div-desc" ">
+        <li class="list-item, div-desc">
             <img class="cont-img" alt="mods" src="mods.png" />
             <p>Insane amount of community mods!</p>
         </li>
     </ul>
     <hr />
     <!--Full description-->
-    <article class="article">
+    <article class="article" id="full-description-block">
         <div class="left-block">
             <h2>About</h2>
             <p>The Elder Scrolls V: Skyrim, the 2011 Game of the Year, is the next chapter in the highly anticipated Elder Scrolls saga. Developed by Bethesda Game Studios, the 2011 Studio of the Year, that brought you Oblivion and Fallout 3. Skyrim reimagines and revolutionizes the open-world fantasy epic, bringing to life a complete virtual world open for you to explore any way you choose.</p>
@@ -136,14 +168,14 @@
     </article>
     <hr />
     <!--input-->
-    <div class="flex-cont">
-        <div class="cont-feedback"><label for="email">Feedback:</label></div>
+    <div class="flex-cont" id="feedback-block">
+        <div class="cont-feedback" style="font-size: 28px;"><label for="email">Feedback:</label></div>
         <div style="text-align:center; padding: 10px">
             <div>
-                <input style="width: 100%" id="email" type="email" placeholder="E-mail" />
+                <input id="email" type="email" placeholder="E-mail" />
             </div>
             <div>
-                <textarea style="width: 100%" id="feedback" placeholder="Enter your message here"></textarea>
+                <textarea id="feedback" placeholder="Enter your message here"></textarea>
             </div>
             <button>Send</button>
         </div>
