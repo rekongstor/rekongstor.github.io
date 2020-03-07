@@ -4,7 +4,7 @@ body {
 }
 
 .section-bordered {
-    border: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 
 .cta {
